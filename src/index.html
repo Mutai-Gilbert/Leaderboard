@@ -12,35 +12,27 @@
     <h1 class="title">Leaderboard</h1>
     <div class="hero">
         <div class="scores">
-            <div >
+            <div>
                 <div class="recent">
-                <h2 class="recent-scores">Recent Scores</h2>
-                <button class="btn" type="submit">Refresh</button>
+                    <h2 class="recent-scores">Recent Scores</h2>
+                    <button class="refresh-button" id="refresh-button" type="submit">Refresh</button>
                 </div>
 
                 <div class="score-board" id="score-board">
                     <!-- js file goes here -->
                 </div>
             </div>
-           
+
 
         </div>
         <div class="adding-score">
             <h2 class="add-title">Add your score</h2>
-            <div class="name-score">
-                <input
-              type="text"
-              class="add-name"
-              id="name"
-              placeholder="Your Name"
-            />
-            <input
-              type="text"
-              class="add-score"
-              id="score"
-              placeholder="Your Score"
-            />
-            <button class="btn-score" id="submit" type="submit">Submit</button>
+            <div >
+                <form class="name-score" action="#">
+                    <input type="text" class="add-name" id="name" placeholder="Your Name" />
+                    <input type="text" class="add-score" id="score" placeholder="Your Score" />
+                    <button class="submit-button" id="submit-button" type="submit">Submit</button>
+                </form>
             </div>
 
 
