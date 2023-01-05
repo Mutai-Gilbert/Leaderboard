@@ -7,7 +7,6 @@
 .hero {
   display: flex;
   flex-direction: row;
-  gap: 10vh;
 }
 
 .title {
@@ -42,7 +41,8 @@
 
 .score-board {
   border: 2px solid black;
-  padding: 10px;
+  padding: 5px;
+  margin-top: 15px;
 }
 
 .refresh-button {
@@ -50,6 +50,11 @@
   align-items: center;
   justify-content: center;
   align-self: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
   width: 80px;
 }
 
@@ -82,6 +87,11 @@
   justify-content: center;
   align-self: flex-end;
   width: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
 }
 
 p:nth-of-type(even) {
