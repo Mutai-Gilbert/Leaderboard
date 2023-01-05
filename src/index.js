@@ -1,52 +1,27 @@
 import './style.css';
+import { getAPI, setAPI } from './modules/api.js';
+import display from './modules/display.js';
 
-const names = [
-  {
-    name: 'Gilbert',
-    score: 100,
-  },
-  {
-    name: 'Faith',
-    score: 90,
-  },
-  {
-    name: 'Caren',
-    score: 80,
-  },
-  {
-    name: 'Juliet',
-    score: 99,
-  },
-  {
-    name: 'Brenda',
-    score: 70,
-  },
-  {
-    name: 'Gilbert',
-    score: 100,
-  },
-  {
-    name: 'Faith',
-    score: 90,
-  },
-  {
-    name: 'Caren',
-    score: 80,
-  },
-  {
-    name: 'Juliet',
-    score: 99,
-  },
-  {
-    name: 'Brenda',
-    score: 70,
-  },
-];
+const refresh = document.querySelector('.refresh-button');
+const form = document.querySelector('form');
 
-const leaderBoard = document.querySelector('.score-board');
-
-names.forEach((item) => {
-  const scores = document.createElement('p');
-  scores.innerHTML = `${item.name}: ${item.score}`;
-  leaderBoard.appendChild(scores);
+const getScore = async () => {
+  const scores = await getAPI();
+  display(scores);
+};
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const userName = document.querySelector('#name');
+  const userScore = document.querySelector('#score');
+  const score = {
+    user: userName.value,
+    score: userScore.value,
+  };
+  userName.value = '';
+  userScore.value = '';
+  await setAPI(score);
 });
+refresh.addEventListener('click', async () => {
+  getScore();
+});
+getScore();
