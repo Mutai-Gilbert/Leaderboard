@@ -68,7 +68,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://github.com/Mutai-Gilbert/Leaderboard.git) 
+- [Live Demo Link](https://mutai-gilbert.github.io/Leaderboard/dist/) 
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
